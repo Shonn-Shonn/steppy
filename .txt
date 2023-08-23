@@ -1,0 +1,4 @@
+npx serve 
+
+v-model
+two-way data binding

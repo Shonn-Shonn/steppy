@@ -3,6 +3,9 @@ npx serve
 v-model
 two-way data binding
 
+v-bind 
+one-way data binding
+
 Single-File-Component(SFC)
 
 Vue components can be authored in two different API styles: Options API and Composition API.
@@ -25,3 +28,6 @@ used with <script setup>
  In fact, the Options API is implemented on top of the Composition API! 
 
  Go with Composition API + Single-File Components if you plan to build full applications with Vue
+
+Vue. js Directives are special HTML attributes that allow us to manipulate the DOM.
+

@@ -1,0 +1,5 @@
+Be default (v-model)
+
+Default prop name is modelValue
+Default event is update:modelValue
+

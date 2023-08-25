@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js">
     </script>
 </head>
 <body>
     <div id="app">
-        <input v-model="newTask" type="text" placeholder="enter"/>
-        <button @click="addTask">Add Task</button>
-        {{this.tasks}}
+        <input v-model="name" type="text">
+        Value: {{name}}
     </div>
 
     <script>
         const app = Vue.createApp({
             data(){
                 return {
-                    newTask: '',
-                    tasks: [],
+                   name: 'Wint Phyusin Maung'
                 };
             },
 
             methods: {
-                addTask() {
-                    if(this.newTask.trim() !== ''){
-                        this.tasks.push(this.newTask);
-                        this.newTask = '';
-                    }
-                }
+               
             }
         })
 

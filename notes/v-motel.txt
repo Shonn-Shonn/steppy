@@ -3,3 +3,8 @@ Be default (v-model)
 Default prop name is modelValue
 Default event is update:modelValue
 
+Vue directives are special HTML attributes with the prefix v- 
+Vue directives connect to the Vue instance
+
+
+a value to the v-bind directive, we can write a JavaScript object with the CSS property and value

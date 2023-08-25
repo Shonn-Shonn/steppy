@@ -1,0 +1,1 @@
+<div v-bind:[attribute]="[Vue data]"></div>

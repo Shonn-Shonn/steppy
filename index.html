@@ -9,6 +9,7 @@
     <style>
         html,body{
             height:100%;
+            font-family: 'Times New Roman', Times, serif;
         }
         body{
             display: grid;
@@ -20,11 +21,17 @@
         .text-blue{
             color: blue;
         }
+        .bgCo{
+            background-color: cadetblue;
+            padding: 3rem;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
     <div id="app">
-        <button :class="active ? 'text-green' : 'text-blue'" @click="toggle">Click Me</button>
+        <button :style="{fontSize: size + 'px'}" :class="active ? 'text-green' : 'text-blue'" @click="toggle">Click Me</button>
+        <p :class="{bgCo: important}">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum veritatis deserunt, vel rerum necessitatibus doloremque sapiente repellendus, vitae iure asperiores officiis cumque maxime! Accusantium, libero incidunt consectetur nobis obcaecati enim!</p>
     </div>
     
     <script>
@@ -32,6 +39,9 @@
             data(){
                 return{
                     active: true,
+                    important: true,
+                    size: 34,
+                    classBg : 'bgCo',
                 }
             },
             methods: {

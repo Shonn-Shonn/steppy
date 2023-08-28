@@ -13,16 +13,24 @@
         <section>
             <h2 class="font-bold mb-2">Assignments</h2>
             <ul>
-                <li>Finish Projects <input type="checkbox"/></li>
-                <li>Read chapter 4 <input type="checkbox"/></li>
-                <li>Turn in homework <input type="checkbox"/></li>
+                <li v-for="assignment in assignments">{{assignment.name}}</li> 
             </ul>
         </section>
     </div>
     <script>
-        Vue.createApp({
+        let app  = {
+            data() {
+                return {
+                    assignments: [
+                        {name: 'Finish project', complete: false},
+                        {name: 'Read chapter 4', complete: true},
+                        {name: 'Turn in homework', complete: true},
+                    ]
+                }
+            }
+        };
 
-        })
+        Vue.createApp(app).mount("#app");
     </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ npx serve
 v-model
 two-way data binding
 
-v-bind 
+v-bind :
 one-way data binding
 
 Single-File-Component(SFC)

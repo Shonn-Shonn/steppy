@@ -11,11 +11,30 @@
 <body  class="h-full grid place-items-center">
     <div id="app">
         <section>
-            <h2 class="font-bold mb-2">Assignments</h2>
+            <h2 class="font-bold mb-2">In progress</h2>
             <ul>
-                <li v-for="assignment in assignments">{{assignment.name}}</li> 
+                <li v-for="assignment in assignments">
+                    <label>
+                        {{assignment.name}}
+                        <input type="checkbox" v-model="assignment.complete"/>
+                    </label>
+                </li> 
             </ul>
         </section>
+
+        <section>
+            <h2 class="font-bold mb-2 mt-3">Completed</h2>
+            <ul>
+                <li v-for="assignment in assignments.filter(a => a.complete)">
+                    <label>
+                        {{assignment.name}}
+                        <input type="checkbox" v-model="assignment.complete"/>
+                    </label>
+                </li> 
+            </ul>
+        </section>
+
+        {{assignments}}
     </div>
     <script>
         let app  = {

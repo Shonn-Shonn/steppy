@@ -10,7 +10,7 @@
 </head>
 <body  class="h-full grid place-items-center">
     <div id="app">
-        <section v-show="inProgressAssignment.length">
+        <section v-show="assignments.filter(a => !a.complete).length">
             <h2 class="font-bold mb-2">In progress</h2>
             <ul>
                 <li 
@@ -47,9 +47,9 @@
             data() {
                 return {
                     assignments: [
-                        {name: 'Finish project', complete: false},
-                        {name: 'Read chapter 4', complete: true},
-                        {name: 'Turn in homework', complete: true},
+                        {id : 1, name: 'Finish project', complete: false},
+                        {id: 2, name: 'Read chapter 4', complete: true},
+                        {id: 3, name: 'Turn in homework', complete: true},
                     ]
                 }
             },

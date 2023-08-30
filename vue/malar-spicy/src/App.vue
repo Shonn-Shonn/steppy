@@ -1,10 +1,15 @@
 <script>
-  const objectOfAttrs = {
-  id: 'container',
-  class: 'wrapper'
-  }
+import { ref } from 'vue';
 
-  export default {
+export default {
+    setup() {
+    const count = ref(0)
+
+    // expose the ref to the template
+    return {
+      count
+    }
+  },
   data() {
     return {
       rawHtml : '<span style="color: red">This should be red.</span>',
@@ -28,6 +33,8 @@
   <p>Using v-html directive: <span v-html="rawHtml"></span></p>
   <a :href="link">www.google.com</a>
   <input type="checkbox" :checked="isChecked">
+  <button @click="count++">Count </button>
+  <h1>{{count}}</h1>
 
   <div>
     <p>Number + 1 : {{number + 1}}</p>
@@ -46,3 +53,4 @@
 </style>
 
 //v-bind 
+// Vue directives (special attributes that start with v-)

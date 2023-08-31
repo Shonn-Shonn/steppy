@@ -31,3 +31,7 @@ used with <script setup>
 
 Vue. js Directives are special HTML attributes that allow us to manipulate the DOM.
 
+//reactive state ref composition API
+
+//setup() to access refs
+

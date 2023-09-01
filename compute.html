@@ -14,21 +14,8 @@
     </div>
 </body>
 <script type="module">
-
-    import AppButton from './js/components/AppButton.js';
-
-    let app = {
-        components: {
-            'app-button': AppButton
-        },
-        data() {
-        return {
-            isButtonDisabled: true, 
-            isChosen: true,
-        };
-    }
-    }
-    Vue.createApp(app).mount('#app');
+    import App from './js/components/App.js'
+    Vue.createApp(App).mount('#app');
 </script>
 </html>
 
